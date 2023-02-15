@@ -18,8 +18,8 @@ router.post(
 );
 
 async function controllerGetAllLocations(req, res) {
-  const limit = req.query.limit || 20;
-  const offset = req.query.offset || 0;
+  const limit = req.query.limit || 200;
+  const offset = req.query.offset || 19219;
   const locations = await locationsService.findAll(limit, offset);
   return res.status(200).send(locations);
 }
