@@ -48,7 +48,7 @@ async function updateOne(id, newData) {
 }
 
 async function generateJwt(user) {
-  return jwt.sign({ sub: user._id, role: user.role }, 'secret');
+  return jwt.sign({ sub: user._id, role: user.role }, process.env.JWT_SECRET);
 }
 
 async function deleteOne(id) {
